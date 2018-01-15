@@ -29,6 +29,8 @@ from __future__ import print_function
 
 import sys
 import threading
+import time
+import glog
 
 # This is a placeholder for a Google-internal import.
 
@@ -156,14 +158,23 @@ def do_inference(hostport, work_dir, concurrency, num_tests):
 
 
 def main(_):
-  if FLAGS.num_tests > 10000:
-    print('num_tests should not be greater than 10k')
+  if FLAGS.num_tests > 1000000000: # 1B
+    print('num_tests should not be greater than 1B')
     return
   if not FLAGS.server:
     print('please specify server host:port')
     return
+  start_time = time.time()
+  glog.info('start_time: %s sec', start_time)
+
   error_rate = do_inference(FLAGS.server, FLAGS.work_dir,
                             FLAGS.concurrency, FLAGS.num_tests)
+
+  end_time = time.time()
+  glog.info('end_time: %s sec', end_time)
+  runtime = end_time - start_time
+  glog.info('spent %s seconds to predict %d images', runtime, FLAGS.num_tests)
+  # throughput = 
   print('\nInference error rate: %s%%' % (error_rate * 100))
 
 
