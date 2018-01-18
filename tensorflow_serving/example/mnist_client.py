@@ -111,8 +111,8 @@ def _create_rpc_callback(label, result_counter):
       result_counter.inc_error()
       print(exception)
     else:
-      sys.stdout.write('.')
-      sys.stdout.flush()
+      # sys.stdout.write('.')
+      # sys.stdout.flush()
       response = numpy.array(
           result_future.result().outputs['scores'].float_val)
       prediction = numpy.argmax(response)
@@ -175,7 +175,7 @@ def main(_):
   runtime = end_time - start_time
   glog.info('spent %s seconds to predict %d images', runtime, FLAGS.num_tests)
   # throughput = 
-  print('\nInference error rate: %s%%' % (error_rate * 100))
+  print('\nResult:{},{},{},{}'.format(FLAGS.concurrency, FLAGS.num_tests, runtime, error_rate))
 
 
 if __name__ == '__main__':
