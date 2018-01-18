@@ -1,4 +1,5 @@
 node_modules
+benchmarks
 /bazel-bin
 /bazel-ci_build-cache
 /bazel-genfiles
