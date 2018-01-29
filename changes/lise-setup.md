@@ -1,3 +1,5 @@
+## Initial setup
+
 Order of operations:
 
 install pip for python 2.7
@@ -89,3 +91,44 @@ run tests
 python tensorflow_serving/example/mnist_client.py --server=localhost:9000 --concurrency=1 --num_tests=1000
 ```
 
+## Inception setup
+
+This requires building Tensorflow Serving Example and Model Server with Bazel.
+About 20 min for Example, 15 min for Model Server.
+
+```
+bazel build -c opt tensorflow_serving/example/... --incompatible_load_argument_is_label=false
+bazel build -c opt tensorflow_serving/model_servers:tensorflow_model_server
+```
+
+Download and decompress the inception model:
+
+```
+curl -O http://download.tensorflow.org/models/image/imagenet/inception-v3-2016-03-01.tar.gz
+tar xzf inception-v3-2016-03-01.tar.gz
+```
+
+Export inception:
+
+```
+bazel-bin/tensorflow_serving/example/inception_saved_model --checkpoint_dir=inception-v3 --output_dir=/tmp/inception-export
+```
+
+**Note**: I received the warning when compiling on LEAP-409:
+
+```
+> Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+```
+
+Set up the server:
+
+```
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception \
+    --model_base_path=/tmp/inception-export &> inception_log & [1] 45
+```
+
+Using the server:
+
+```
+bazel-bin/tensorflow_serving/example/inception_client --server=localhost:9000 --image=/path/to/jpeg
+```
