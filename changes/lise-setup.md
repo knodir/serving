@@ -72,7 +72,7 @@ sudo apt-get update && sudo apt-get install tensorflow-model-server
 
 clone serving repo (dev branch) from knodir github
 ```
-git clone https://github.com/knodir/serving.git
+git clone --recurse_submodules https://github.com/knodir/serving.git
 git checkout dev
 ```
 
@@ -86,6 +86,11 @@ install glog -- needed for timing, added by Nodir
 sudo apt-get install glog
 ```
 
+setup server
+```
+tensorflow_model_server --port=9000 --model_name=mnist --model_base_path=/tmp/mnist_model/
+```
+
 run tests
 ```
 python tensorflow_serving/example/mnist_client.py --server=localhost:9000 --concurrency=1 --num_tests=1000
@@ -93,8 +98,11 @@ python tensorflow_serving/example/mnist_client.py --server=localhost:9000 --conc
 
 ## Inception setup
 
-This requires building Tensorflow Serving Example and Model Server with Bazel.
-About 20 min for Example, 15 min for Model Server.
+**Note: the version of TF Serving in this repo is not building with the latest version of Bazel.**
+
+Either install an older version of Bazel (0.9 works) or update Tensorflow to latest.
+
+Build takes about 45 min total on LEAP-409.
 
 ```
 bazel build -c opt tensorflow_serving/example/... --incompatible_load_argument_is_label=false
