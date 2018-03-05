@@ -56,7 +56,7 @@ def main(_):
   # Train model
   print 'Training model...'
   mnist = mnist_input_data.read_data_sets(FLAGS.work_dir, one_hot=True)
-  sess = tf.InteractiveSession()
+  sess = tf.InteractiveSession(config=tf.ConfigProto(log_device_placement=True))
   serialized_tf_example = tf.placeholder(tf.string, name='tf_example')
   feature_configs = {'x': tf.FixedLenFeature(shape=[784], dtype=tf.float32),}
   tf_example = tf.parse_example(serialized_tf_example, feature_configs)
