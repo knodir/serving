@@ -1,0 +1,246 @@
+2018-03-04 16:20:09.986080: I tensorflow_serving/model_servers/main.cc:147] Building single TensorFlow model file config:  model_name: mnist model_base_path: /tmp/mnist_model
+2018-03-04 16:20:09.986255: I tensorflow_serving/model_servers/server_core.cc:441] Adding/updating models.
+2018-03-04 16:20:09.986265: I tensorflow_serving/model_servers/server_core.cc:492]  (Re-)adding model: mnist
+2018-03-04 16:20:10.086684: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: mnist version: 1}
+2018-03-04 16:20:10.086716: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: mnist version: 1}
+2018-03-04 16:20:10.086728: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: mnist version: 1}
+2018-03-04 16:20:10.086749: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/mnist_model/1
+2018-03-04 16:20:10.086763: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/mnist_model/1
+2018-03-04 16:20:10.088067: I external/org_tensorflow/tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-03-04 16:20:10.211356: I external/org_tensorflow/tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:892] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-03-04 16:20:10.211706: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:01:00.0
+totalMemory: 11.91GiB freeMemory: 11.71GiB
+2018-03-04 16:20:10.211728: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: TITAN X (Pascal), pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-04 16:20:10.312721: I external/org_tensorflow/tensorflow/core/common_runtime/direct_session.cc:299] Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: TITAN X (Pascal), pci bus id: 0000:01:00.0, compute capability: 6.1
+
+2018-03-04 16:20:10.325771: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/RestoreV2_1: (RestoreV2)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325794: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/RestoreV2: (RestoreV2)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325798: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/StringJoin: (StringJoin)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325802: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/ShardedFilename: (ShardedFilename)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325807: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] index_to_string/range: (Range)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.325810: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] index_to_string/ToInt64: (Cast)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.325814: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] index_to_string/table_init: (InitializeTableV2)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325817: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] init_all_tables: (NoOp)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.325830: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] legacy_init_op: (NoOp)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.325834: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Fill: (Fill)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325838: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Neg_grad/Neg: (Neg)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325851: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Sum_grad/Reshape: (Reshape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325854: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Variable_1: (VariableV2)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325858: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/Assign_1: (Assign)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325861: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Variable_1/read: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325864: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Variable_1/Assign: (Assign)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325867: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Variable: (VariableV2)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325870: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/Assign: (Assign)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325883: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/restore_shard: (NoOp)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.325914: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/restore_all: (NoOp)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.325919: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/SaveV2: (SaveV2)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325931: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/control_dependency: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325934: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/MergeV2Checkpoints/checkpoint_prefixes: (Pack)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325937: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/MergeV2Checkpoints: (MergeV2Checkpoints)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325940: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/Identity: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325943: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Variable/read: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325947: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Variable/Assign: (Assign)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325950: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] init: (NoOp)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.325954: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] ArgMax_1: (ArgMax)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.325966: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/Shape: (Shape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325970: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] ParseExample/ParseExample: (ParseExample)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325974: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] x: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325977: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] MatMul: (MatMul)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325981: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/Shape: (Shape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325985: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/BroadcastGradientArgs: (BroadcastGradientArgs)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325988: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] add: (Add)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325992: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] y: (Softmax)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.325995: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] ArgMax: (ArgMax)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326000: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Equal: (Equal)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326004: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Cast: (Cast)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326008: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Mean: (Mean)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326011: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] TopKV2: (TopKV2)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326023: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] ToInt64: (Cast)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326026: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] index_to_string_Lookup: (LookupTableFindV2)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326030: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Log: (Log)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326044: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/Shape_1: (Shape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326048: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/BroadcastGradientArgs: (BroadcastGradientArgs)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326051: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] mul: (Mul)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326054: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Sum_grad/Shape: (Shape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326058: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Sum_grad/Tile: (Tile)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326061: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/mul_1: (Mul)/job:localhost/replica:0/task:0/device:CPU:0
+++++++++++++++++ before: log_device_placement = 0
+++++++++++++++++ after: log_device_placement = 1
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: TITAN X (Pascal), pci bus id: 0000:01:00.0, compute capability: 6.1
+save/RestoreV2_1: (RestoreV2): /job:localhost/replica:0/task:0/device:CPU:0
+save/RestoreV2: (RestoreV2): /job:localhost/replica:0/task:0/device:CPU:0
+save/StringJoin: (StringJoin): /job:localhost/replica:0/task:0/device:CPU:0
+save/ShardedFilename: (ShardedFilename): /job:localhost/replica:0/task:0/device:CPU:0
+index_to_string/range: (Range): /job:localhost/replica:0/task:0/device:GPU:0
+index_to_string/ToInt64: (Cast): /job:localhost/replica:0/task:0/device:GPU:0
+index_to_string/table_init: (InitializeTableV2): /job:localhost/replica:0/task:0/device:CPU:0
+init_all_tables: (NoOp): /job:localhost/replica:0/task:0/device:GPU:0
+legacy_init_op: (NoOp): /job:localhost/replica:0/task:0/device:GPU:0
+gradients/Fill: (Fill): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/Neg_grad/Neg: (Neg): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/Sum_grad/Reshape: (Reshape): /job:localhost/replica:0/task:0/device:CPU:0
+Variable_1: (VariableV2): /job:localhost/replica:0/task:0/device:CPU:0
+save/Assign_1: (Assign): /job:localhost/replica:0/task:0/device:CPU:0
+Variable_1/read: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+Variable_1/Assign: (Assign): /job:localhost/replica:0/task:0/device:CPU:0
+Variable: (VariableV2): /job:localhost/replica:0/task:0/device:CPU:0
+save/Assign: (Assign): /job:localhost/replica:0/task:0/device:CPU:0
+save/restore_shard: (NoOp): /job:localhost/replica:0/task:0/device:GPU:0
+save/restore_all: (NoOp): /job:localhost/replica:0/task:0/device:GPU:0
+save/SaveV2: (SaveV2): /job:localhost/replica:0/task:0/device:CPU:0
+save/control_dependency: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+save/MergeV2Checkpoints/checkpoint_prefixes: (Pack): /job:localhost/replica:0/task:0/device:CPU:0
+save/MergeV2Checkpoints: (MergeV2Checkpoints): /job:localhost/replica:0/task:0/device:CPU:0
+save/Identity: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+Variable/read: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+Variable/Assign: (Assign): /job:localhost/replica:0/task:0/device:CPU:0
+init: (NoOp): /job:localhost/replica:0/task:0/device:GPU:0
+ArgMax_1: (ArgMax): /job:localhost/replica:0/task:0/device:GPU:0
+gradients/mul_grad/Shape: (Shape): /job:localhost/replica:0/task:0/device:CPU:0
+ParseExample/ParseExample: (ParseExample): /job:localhost/replica:0/task:0/device:CPU:0
+x: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+MatMul: (MatMul): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/add_grad/Shape: (Shape): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/add_grad/BroadcastGradientArgs: (BroadcastGradientArgs): /job:localhost/replica:0/task:0/device:CPU:0
+add: (Add): /job:localhost/replica:0/task:0/device:CPU:0
+y: (Softmax): /job:localhost/replica:0/task:0/device:CPU:0
+ArgMax: (ArgMax): /job:localhost/replica:0/task:0/device:GPU:0
+Equal: (Equal): /job:localhost/replica:0/task:0/device:GPU:0
+Cast: (Cast): /job:localhost/replica:0/task:0/device:GPU:0
+Mean: (Mean): /job:localhost/replica:0/task:0/device:GPU:0
+TopKV2: (TopKV2): /job:localhost/replica:0/task:0/device:GPU:0
+ToInt64: (Cast): /job:localhost/replica:0/task:0/device:GPU:0
+index_to_string_Lookup: (LookupTableFindV2): /job:localhost/replica:0/task:0/device:CPU:0
+Log: (Log): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/Shape_1: (Shape): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/BroadcastGradientArgs: (BroadcastGradientArgs): /job:localhost/replica:0/task:0/device:CPU:0
+mul: (Mul): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/Sum_grad/Shape: (Shape): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/Sum_grad/Tile: (Tile): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/mul_1: (Mul): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/Sum_1: (Sum): /job:localhost/replica:0/task:0/devi2018-03-04 16:20:10.326066: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/Sum_1: (Sum)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326070: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/Reshape_1: (Reshape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326073: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/mul: (Mul)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326076: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/Sum: (Sum)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326080: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/Reshape: (Reshape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326083: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/tuple/group_deps: (NoOp)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326086: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/tuple/control_dependency_1: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326089: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Log_grad/Reciprocal: (Reciprocal)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326093: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Log_grad/mul: (Mul)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326097: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/y_grad/mul: (Mul)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326101: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/y_grad/Sum: (Sum)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326104: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/y_grad/Reshape: (Reshape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326108: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/y_grad/sub: (Sub)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326111: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/y_grad/mul_1: (Mul)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326115: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/Sum_1: (Sum)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326118: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/Reshape_1: (Reshape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326121: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/Sum: (Sum)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326125: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/Reshape: (Reshape)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326129: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/tuple/group_deps: (NoOp)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326132: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/tuple/control_dependency_1: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326136: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] GradientDescent/update_Variable_1/ApplyGradientDescent: (ApplyGradientDescent)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326139: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/tuple/control_dependency: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326143: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/MatMul_grad/MatMul_1: (MatMul)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326146: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/MatMul_grad/MatMul: (MatMul)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326149: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/MatMul_grad/tuple/group_deps: (NoOp)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326153: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/MatMul_grad/tuple/control_dependency_1: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326156: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] GradientDescent/update_Variable/ApplyGradientDescent: (ApplyGradientDescent)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326161: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] GradientDescent: (NoOp)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326164: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/MatMul_grad/tuple/control_dependency: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326167: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/mul_grad/tuple/control_dependency: (Identity)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326170: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Sum: (Sum)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326174: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Neg: (Neg)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326177: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/RestoreV2_1/shape_and_slices: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326181: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/RestoreV2_1/tensor_names: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326184: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/RestoreV2/shape_and_slices: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326187: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/RestoreV2/tensor_names: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326191: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/SaveV2/shape_and_slices: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326194: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/SaveV2/tensor_names: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326198: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/ShardedFilename/shard: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326201: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/num_shards: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326205: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/StringJoin/inputs_1: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326208: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] save/Const: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326212: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Const_2: (Const)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326216: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] ArgMax_1/dimension: (Const)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326219: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] ArgMax/dimension: (Const)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326222: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] index_to_string/Const: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326226: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] index_to_string: (HashTableV2)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326229: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] index_to_string/range/delta: (Const)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326233: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] index_to_string/range/start: (Const)/job:localhost/replica:0/task:0/device:GPU:0
+ce:CPU:0
+gradients/mul_grad/Reshape_1: (Reshape): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/mul: (Mul): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/Sum: (Sum): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/Reshape: (Reshape): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/tuple/group_deps: (NoOp): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/tuple/control_dependency_1: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/Log_grad/Reciprocal: (Reciprocal): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/Log_grad/mul: (Mul): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/y_grad/mul: (Mul): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/y_grad/Sum: (Sum): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/y_grad/Reshape: (Reshape): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/y_grad/sub: (Sub): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/y_grad/mul_1: (Mul): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/add_grad/Sum_1: (Sum): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/add_grad/Reshape_1: (Reshape): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/add_grad/Sum: (Sum): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/add_grad/Reshape: (Reshape): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/add_grad/tuple/group_deps: (NoOp): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/add_grad/tuple/control_dependency_1: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+GradientDescent/update_Variable_1/ApplyGradientDescent: (ApplyGradientDescent): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/add_grad/tuple/control_dependency: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/MatMul_grad/MatMul_1: (MatMul): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/MatMul_grad/MatMul: (MatMul): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/MatMul_grad/tuple/group_deps: (NoOp): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/MatMul_grad/tuple/control_dependency_1: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+GradientDescent/update_Variable/ApplyGradientDescent: (ApplyGradientDescent): /job:localhost/replica:0/task:0/device:CPU:0
+GradientDescent: (NoOp): /job:localhost/replica:0/task:0/device:GPU:0
+gradients/MatMul_grad/tuple/control_dependency: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+gradients/mul_grad/tuple/control_dependency: (Identity): /job:localhost/replica:0/task:0/device:CPU:0
+Sum: (Sum): /job:localhost/replica:0/task:0/device:CPU:0
+Neg: (Neg): /job:localhost/replica:0/task:0/device:CPU:0
+save/RestoreV2_1/shape_and_slices: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+save/RestoreV2_1/tensor_names: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+save/RestoreV2/shape_and_slices: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+save/RestoreV2/tensor_names: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+save/SaveV2/shape_and_slices: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+save/SaveV2/tensor_names: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+save/ShardedFilename/shard: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+save/num_shards: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+save/StringJoin/inputs_1: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+save/Const: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+Const_2: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+ArgMax_1/dimension: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+ArgMax/dimension: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+index_to_string/Const: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+index_to_string: (HashTableV2): /job:localhost/replica:0/task:0/device:CPU:0
+index_to_string/range/delta: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+index_to_string/range/start: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+index_to_string/Size: (Const): /job:localhost/replica:0/ta2018-03-04 16:20:10.326237: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] index_to_string/Size: (Const)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326241: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Const_1: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326244: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] TopKV2/k: (Const)/job:localhost/replica:0/task:0/device:GPU:0
+2018-03-04 16:20:10.326248: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] GradientDescent/learning_rate: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326251: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/add_grad/Shape_1: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326254: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/y_grad/Reshape/shape: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326258: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/y_grad/Sum/reduction_indices: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326261: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Sum_grad/Reshape/shape: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326265: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Const: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326268: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] gradients/Shape: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326271: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Const: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326274: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] zeros_1: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326278: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] zeros: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326281: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] Placeholder: (Placeholder)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326284: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] ParseExample/ParseExample/dense_keys_0: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326288: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] ParseExample/ParseExample/names: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326291: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] ParseExample/Const: (Const)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326294: I external/org_tensorflow/tensorflow/core/common_runtime/placer.cc:874] tf_example: (Placeholder)/job:localhost/replica:0/task:0/device:CPU:0
+2018-03-04 16:20:10.326306: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-04 16:20:10.329156: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-04 16:20:10.331297: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 244532 microseconds.
+2018-03-04 16:20:10.331419: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: mnist version: 1}
+E0304 16:20:10.332237187    4646 ev_epoll1_linux.c:1051]     grpc epoll fd: 23
+2018-03-04 16:20:10.333184: I tensorflow_serving/model_servers/main.cc:289] Running ModelServer at 0.0.0.0:9000 ...
