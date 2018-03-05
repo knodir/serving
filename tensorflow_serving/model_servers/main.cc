@@ -302,6 +302,7 @@ tensorflow::serving::PlatformConfigMap ParsePlatformConfigMap(
 int main(int argc, char** argv) {
   tensorflow::int32 port = 8500;
   bool enable_batching = false;
+  bool log_device_placement = false;
   tensorflow::string batching_parameters_file;
   tensorflow::string model_name = "default";
   tensorflow::int32 file_system_poll_wait_seconds = 1;
@@ -342,11 +343,14 @@ int main(int argc, char** argv) {
                        "Tensorflow session. Auto-configured by default."
                        "Note that this option is ignored if "
                        "--platform_config_file is non-empty."),
+      tensorflow::Flag("log_device_placement", &log_device_placement,
+                       "log the device placement"),
       tensorflow::Flag("platform_config_file", &platform_config_file,
                        "If non-empty, read an ascii PlatformConfigMap protobuf "
                        "from the supplied file name, and use that platform "
                        "config instead of the Tensorflow platform. (If used, "
                        "--enable_batching is ignored.)")};
+
   string usage = tensorflow::Flags::Usage(argv[0], flag_list);
   const bool parse_result = tensorflow::Flags::Parse(&argc, argv, flag_list);
   if (!parse_result || (model_base_path.empty() && model_config_file.empty())) {
@@ -394,6 +398,14 @@ int main(int argc, char** argv) {
         ->set_intra_op_parallelism_threads(tensorflow_session_parallelism);
     session_bundle_config.mutable_session_config()
         ->set_inter_op_parallelism_threads(tensorflow_session_parallelism);
+
+    std::cout << "++++++++++++++++ before: log_device_placement = " <<
+        session_bundle_config.mutable_session_config()->log_device_placement() << "\n";
+    session_bundle_config.mutable_session_config()
+        ->set_log_device_placement(log_device_placement);
+    std::cout << "++++++++++++++++ after: log_device_placement = " <<
+        session_bundle_config.mutable_session_config()->log_device_placement() << "\n";
+
     options.platform_config_map = CreateTensorFlowPlatformConfigMap(
         session_bundle_config, use_saved_model);
   } else {
