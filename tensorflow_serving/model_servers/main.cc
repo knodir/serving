@@ -398,13 +398,8 @@ int main(int argc, char** argv) {
         ->set_intra_op_parallelism_threads(tensorflow_session_parallelism);
     session_bundle_config.mutable_session_config()
         ->set_inter_op_parallelism_threads(tensorflow_session_parallelism);
-
-    std::cout << "++++++++++++++++ before: log_device_placement = " <<
-        session_bundle_config.mutable_session_config()->log_device_placement() << "\n";
     session_bundle_config.mutable_session_config()
         ->set_log_device_placement(log_device_placement);
-    std::cout << "++++++++++++++++ after: log_device_placement = " <<
-        session_bundle_config.mutable_session_config()->log_device_placement() << "\n";
 
     options.platform_config_map = CreateTensorFlowPlatformConfigMap(
         session_bundle_config, use_saved_model);
