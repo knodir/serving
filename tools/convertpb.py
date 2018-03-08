@@ -40,13 +40,13 @@ if __name__ == '__main__':
                 "[/output/dir/]")
         sys.exit()
 
-    src_dir = args[1]
+    src = args[1]
 
     sm = saved_model_pb2.SavedModel()
     output_dir = os.getcwd() if len(args) < 3 else args[2]
 
-    pbpath = os.path.join(src_dir, constants.SAVED_MODEL_FILENAME_PB)
-    txtpath = os.path.join(src_dir, constants.SAVED_MODEL_FILENAME_PBTXT)
+    pbpath = os.path.join(src, constants.SAVED_MODEL_FILENAME_PB)
+    txtpath = os.path.join(src, constants.SAVED_MODEL_FILENAME_PBTXT)
     if file_io.file_exists(pbpath):
         data = file_io.FileIO(pbpath, 'rb').read()
         output_path = os.path.join(output_dir, 
