@@ -132,11 +132,39 @@ Set up the server:
 
 ```
 bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception \
-    --model_base_path=/tmp/inception-export &> inception_log & [1] 45
+    --model_base_path=/tmp/inception-export &> inception_log 
 ```
 
-Using the server:
+Using the server (original inception client):
 
 ```
 bazel-bin/tensorflow_serving/example/inception_client --server=localhost:9000 --image=/path/to/jpeg
 ```
+
+Using the server (modified inception client):
+```
+bazel-bin/tensorflow_serving/example/inception_client --server=localhost:9000 --concurrency=1 --num_tests=100
+```
+
+## GPU
+
+Sometimes Ubuntu has problems finding various CUDA libraries.
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+```
+
+Real time (well, every 0.1s) monitoring of GPU usage:
+```
+watch -n0.1 nvidia-smi
+```
+
+
+## Tools
+
+Fetch 1000 images from imagenet, with no more than 10 per category.
+Fetched images need to be checked for corruption.
+```
+python imgfetch.py -i 1000 -s 10
+python cleanimages.py
+```
+(this process is horribly brittle and prone to problems)
