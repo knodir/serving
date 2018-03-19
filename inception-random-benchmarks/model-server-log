@@ -1,0 +1,171 @@
+2018-03-14 17:13:21.888406: I tensorflow_serving/model_servers/main.cc:147] Building single TensorFlow model file config:  model_name: inception model_base_path: /tmp/inception-export
+2018-03-14 17:13:21.888533: I tensorflow_serving/model_servers/server_core.cc:441] Adding/updating models.
+2018-03-14 17:13:21.888544: I tensorflow_serving/model_servers/server_core.cc:492]  (Re-)adding model: inception
+2018-03-14 17:13:21.989496: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 1}
+2018-03-14 17:13:21.989554: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 1}
+2018-03-14 17:13:21.989582: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 1}
+2018-03-14 17:13:21.989622: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/1
+2018-03-14 17:13:21.989653: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/1
+2018-03-14 17:13:22.058656: I external/org_tensorflow/tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-03-14 17:13:22.160579: I external/org_tensorflow/tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:892] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-03-14 17:13:22.160990: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.8225
+pciBusID: 0000:01:00.0
+totalMemory: 7.93GiB freeMemory: 7.63GiB
+2018-03-14 17:13:22.161006: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-14 17:13:22.284013: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-14 17:13:22.693147: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-14 17:13:22.734240: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 744584 microseconds.
+2018-03-14 17:13:22.734442: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 1}
+E0314 17:13:22.735709377   31506 ev_epoll1_linux.c:1051]     grpc epoll fd: 23
+2018-03-14 17:13:22.736389: I tensorflow_serving/model_servers/main.cc:288] Running ModelServer at 0.0.0.0:9000 ...
+2018-03-14 18:30:17.413127: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 2}
+2018-03-14 18:30:17.413196: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 2}
+2018-03-14 18:30:17.413224: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 2}
+2018-03-14 18:30:17.413271: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/2
+2018-03-14 18:30:17.413304: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/2
+2018-03-14 18:30:17.467825: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-14 18:30:17.513691: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-14 18:30:17.667487: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-14 18:30:17.706518: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 293218 microseconds.
+2018-03-14 18:30:17.706649: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 2}
+2018-03-14 18:30:17.706668: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 1}
+2018-03-14 18:30:17.706674: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 1}
+2018-03-14 18:30:17.706678: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 1}
+2018-03-14 18:30:17.753835: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 157316134
+2018-03-14 18:30:17.753857: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 1}
+2018-03-14 18:59:54.563998: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 3}
+2018-03-14 18:59:54.564058: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 3}
+2018-03-14 18:59:54.564084: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 3}
+2018-03-14 18:59:54.564125: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/3
+2018-03-14 18:59:54.564152: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/3
+2018-03-14 18:59:54.583841: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-14 18:59:54.630301: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-14 18:59:54.760659: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-14 18:59:54.800185: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 236033 microseconds.
+2018-03-14 18:59:54.800323: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 3}
+2018-03-14 18:59:54.800341: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 2}
+2018-03-14 18:59:54.800347: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 2}
+2018-03-14 18:59:54.800350: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 2}
+2018-03-14 18:59:54.851028: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 132686258
+2018-03-14 18:59:54.851056: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 2}
+2018-03-14 19:44:08.745511: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 4}
+2018-03-14 19:44:08.745570: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 4}
+2018-03-14 19:44:08.745597: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 4}
+2018-03-14 19:44:08.745639: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/4
+2018-03-14 19:44:08.745665: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/4
+2018-03-14 19:44:08.764998: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-14 19:44:08.800224: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-14 19:44:08.917303: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-14 19:44:08.952164: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 206498 microseconds.
+2018-03-14 19:44:08.952310: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 4}
+2018-03-14 19:44:08.952341: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 3}
+2018-03-14 19:44:08.952347: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 3}
+2018-03-14 19:44:08.952350: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 3}
+2018-03-14 19:44:08.998384: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 132698305
+2018-03-14 19:44:08.998406: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 3}
+2018-03-14 20:33:43.946952: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 5}
+2018-03-14 20:33:43.947010: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 5}
+2018-03-14 20:33:43.947036: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 5}
+2018-03-14 20:33:43.947079: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/5
+2018-03-14 20:33:43.947106: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/5
+2018-03-14 20:33:43.967926: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-14 20:33:44.007096: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-14 20:33:44.120732: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-14 20:33:44.154632: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 207525 microseconds.
+2018-03-14 20:33:44.154765: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 5}
+2018-03-14 20:33:44.154785: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 4}
+2018-03-14 20:33:44.154791: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 4}
+2018-03-14 20:33:44.154794: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 4}
+2018-03-14 20:33:44.199221: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 132710362
+2018-03-14 20:33:44.199904: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 4}
+2018-03-14 21:31:41.303326: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 6}
+2018-03-14 21:31:41.303366: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 6}
+2018-03-14 21:31:41.303385: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 6}
+2018-03-14 21:31:41.303402: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/6
+2018-03-14 21:31:41.303408: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/6
+2018-03-14 21:31:41.319834: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-14 21:31:41.355689: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-14 21:31:41.468458: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-14 21:31:41.503017: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 199600 microseconds.
+2018-03-14 21:31:41.503135: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 6}
+2018-03-14 21:31:41.503154: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 5}
+2018-03-14 21:31:41.503160: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 5}
+2018-03-14 21:31:41.503164: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 5}
+2018-03-14 21:31:41.551314: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 132722416
+2018-03-14 21:31:41.551362: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 5}
+2018-03-14 22:40:05.750575: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 7}
+2018-03-14 22:40:05.750636: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 7}
+2018-03-14 22:40:05.750662: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 7}
+2018-03-14 22:40:05.750705: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/7
+2018-03-14 22:40:05.750732: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/7
+2018-03-14 22:40:05.804045: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-14 22:40:05.842038: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-14 22:40:05.953880: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-14 22:40:05.988312: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 237579 microseconds.
+2018-03-14 22:40:05.988446: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 7}
+2018-03-14 22:40:05.988466: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 6}
+2018-03-14 22:40:05.988472: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 6}
+2018-03-14 22:40:05.988475: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 6}
+2018-03-14 22:40:06.036170: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 132734468
+2018-03-14 22:40:06.036198: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 6}
+2018-03-14 23:59:25.243987: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 8}
+2018-03-14 23:59:25.244046: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 8}
+2018-03-14 23:59:25.244074: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 8}
+2018-03-14 23:59:25.244118: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/8
+2018-03-14 23:59:25.244145: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/8
+2018-03-14 23:59:25.263852: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-14 23:59:25.299730: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-14 23:59:25.411189: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-14 23:59:25.449349: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 205203 microseconds.
+2018-03-14 23:59:25.449483: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 8}
+2018-03-14 23:59:25.449503: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 7}
+2018-03-14 23:59:25.449509: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 7}
+2018-03-14 23:59:25.449512: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 7}
+2018-03-14 23:59:25.492882: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 132746517
+2018-03-14 23:59:25.493523: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 7}
+2018-03-15 01:25:46.781437: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 9}
+2018-03-15 01:25:46.781478: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 9}
+2018-03-15 01:25:46.781494: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 9}
+2018-03-15 01:25:46.781519: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/9
+2018-03-15 01:25:46.781534: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/9
+2018-03-15 01:25:46.818492: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-15 01:25:46.856511: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-15 01:25:46.966655: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-15 01:25:47.001474: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 219934 microseconds.
+2018-03-15 01:25:47.001628: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 9}
+2018-03-15 01:25:47.001647: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 8}
+2018-03-15 01:25:47.001653: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 8}
+2018-03-15 01:25:47.001664: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 8}
+2018-03-15 01:25:47.044783: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 132758564
+2018-03-15 01:25:47.045430: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 8}
+2018-03-15 03:19:10.461679: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 10}
+2018-03-15 03:19:10.461737: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 10}
+2018-03-15 03:19:10.461763: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 10}
+2018-03-15 03:19:10.461805: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/10
+2018-03-15 03:19:10.461831: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/10
+2018-03-15 03:19:10.515476: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-15 03:19:10.554152: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-15 03:19:10.663691: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-15 03:19:10.698823: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 236992 microseconds.
+2018-03-15 03:19:10.698989: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 10}
+2018-03-15 03:19:10.699008: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 9}
+2018-03-15 03:19:10.699014: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 9}
+2018-03-15 03:19:10.699018: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 9}
+2018-03-15 03:19:10.740316: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 132770614
+2018-03-15 03:19:10.740975: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 9}
+2018-03-15 05:31:07.230261: I tensorflow_serving/core/basic_manager.cc:705] Successfully reserved resources to load servable {name: inception version: 11}
+2018-03-15 05:31:07.230321: I tensorflow_serving/core/loader_harness.cc:66] Approving load for servable version {name: inception version: 11}
+2018-03-15 05:31:07.230349: I tensorflow_serving/core/loader_harness.cc:74] Loading servable version {name: inception version: 11}
+2018-03-15 05:31:07.230392: I external/org_tensorflow/tensorflow/contrib/session_bundle/bundle_shim.cc:360] Attempting to load native SavedModelBundle in bundle-shim from: /tmp/inception-export/11
+2018-03-15 05:31:07.230419: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:236] Loading SavedModel from: /tmp/inception-export/11
+2018-03-15 05:31:07.280985: I external/org_tensorflow/tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2018-03-15 05:31:07.317582: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:155] Restoring SavedModel bundle.
+2018-03-15 05:31:07.430569: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:190] Running LegacyInitOp on SavedModel bundle.
+2018-03-15 05:31:07.465275: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:284] Loading SavedModel: success. Took 234855 microseconds.
+2018-03-15 05:31:07.465416: I tensorflow_serving/core/loader_harness.cc:86] Successfully loaded servable version {name: inception version: 11}
+2018-03-15 05:31:07.465435: I tensorflow_serving/core/loader_harness.cc:137] Quiescing servable version {name: inception version: 10}
+2018-03-15 05:31:07.465441: I tensorflow_serving/core/loader_harness.cc:144] Done quiescing servable version {name: inception version: 10}
+2018-03-15 05:31:07.465444: I tensorflow_serving/core/loader_harness.cc:119] Unloading servable version {name: inception version: 10}
+2018-03-15 05:31:07.506040: I ./tensorflow_serving/core/simple_loader.h:294] Calling MallocExtension_ReleaseToSystem() after servable unload with 132782664
+2018-03-15 05:31:07.506670: I tensorflow_serving/core/loader_harness.cc:127] Done unloading servable version {name: inception version: 10}

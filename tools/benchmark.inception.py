@@ -1,11 +1,11 @@
-#!usr/bin/env python
+#usr/bin/env python
 
 import subprocess
 import time
 
 CLIENT = "bazel-bin/tensorflow_serving/example/inception_client"
 TEST_SIZE = [100, 1000, 10000]
-CONCURRENCY = [1, 2, 4, 6, 8, 10]
+CONCURRENCY = [1, 2, 4, 6, 8, 10, 100]
 
 OUTPUT_PATH = "inception_{}"
 

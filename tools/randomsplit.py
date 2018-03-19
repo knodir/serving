@@ -13,7 +13,7 @@ import os
 import sys
 
 DEFAULT_MODEL_PATH = "/tmp/inception-export/1/saved_model.pb"
-DEFAULT_OUTPUT_DIR = os.path.join(os.getcwd(), "random_placement")
+DEFAULT_OUTPUT_DIR = os.path.join(os.getcwd(), "split_models")
 
 CPU0 = "/device:CPU:0"
 
@@ -39,7 +39,7 @@ def print_ops(sm):
 def rand_assign(sm, output_dir):
     """Randomly assign nodes to CPU0 and save the modified model.
 
-    Will create 5 variants with 10%, 20%, 30%, 40%, 50% of nodes assigned to
+    Will create variants with 0%, 10%, 20%, ..., 100% of nodes assigned to
     CPU arbitrarily.
 
     Each subsequent variant will have, assigned to CPU, a superset of the
@@ -52,12 +52,16 @@ def rand_assign(sm, output_dir):
 
     output_str = "saved_model.{}pct.cpu.pb"
 
-    # assign 10, 20, 30, 40, 50% at random to CPU0
-    for p in range(1, 6):
-        sample = random.sample(unassigned, tenth)
-        for i in sample:
-            nodes[i].device = CPU0
-            unassigned.remove(i)
+    # assign nodes at random to CPU0
+    for p in range(0, 11):
+        if 0 < p < 10:
+            sample = random.sample(unassigned, tenth)
+            for i in sample:
+                nodes[i].device = CPU0
+                unassigned.remove(i)
+        if p == 10:  # assign all the nodes
+            for i in unassigned:
+                nodes[i].device = CPU0
 
         # save the model
         if not os.path.exists(output_dir):
@@ -68,8 +72,7 @@ def rand_assign(sm, output_dir):
         file_io.write_string_to_file(output,sm.SerializeToString())
 
         # echo a confirmation
-        print("assigned {} new nodes to CPU,".format(len(sample)),
-              "new model saved as {}".format(output_filename))
+        print("new model saved as {}".format(output_filename))
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
